@@ -1,0 +1,340 @@
+$default-degre : -90deg;
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: #d1d1d1;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: #d1d1d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:
+        linear-gradient(90deg, transparent 1px, #e39a62 1px),
+        linear-gradient(0deg, transparent 1px, #c5804b 1px);
+    background-size: 20px 20px;
+}
+
+.clock {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border: 6px solid #b87039;
+    border-radius: 50%;
+    box-shadow: 0px 3px 5px #2c2c2cbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-body {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #b87039;
+    display: flex;
+    box-shadow: inset 0px 1px 4px #2c2c2c53;
+    background-image: radial-gradient(circle, #af7142, #975523);
+}
+
+.twelve,
+.three,
+.six,
+.nine,
+.one {
+    position: absolute;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+
+.twelve {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::before {
+        width: 1px;
+        background-color: #eaf6f9;
+        height: 5px;
+        content: " ";
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        margin-top: -6px;
+    }
+}
+
+.three {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+
+    &::before {
+        right: 0;
+        width: 5px;
+        background-color: #eaf6f9;
+        height: 1px;
+        content: " ";
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        margin-right: -6px;
+    }
+}
+
+.six {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+        width: 1px;
+        background-color: #eaf6f9;
+        height: 5px;
+        content: " ";
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: -0;
+        margin-bottom: -6px;
+    }
+}
+
+.nine {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+
+    &::before {
+        width: 5px;
+        background-color: #eaf6f9;
+        height: 1px;
+        content: " ";
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        margin-left: -6px;
+    }
+}
+
+.hand {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .end {
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.557);
+    }
+
+    .second-hand {
+        width: 180px;
+        height: 180px;
+        background-color: rgba(255, 0, 0, 0);
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        transform: rotate($default-degre);
+
+        .end,
+        .start {
+            height: 1px;
+            width: 60%;
+        }
+
+        .start {
+            background-color: transparent;
+        }
+
+        .end {
+            background-color: #ffffff;
+        }
+    }
+
+    .minute-hand {
+        width: 150px;
+        height: 3px;
+        background-color: rgba(255, 0, 0, 0);
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        transform: rotate($default-degre);
+
+        .end,
+        .start {
+            height: 1px;
+            width: 50%;
+        }
+
+        .start {
+            background-color: transparent;
+        }
+
+        .end {
+            background-color: #000;
+            border: 1px solid #000;
+            border-radius: 0 50% 50% 0;
+        }
+    }
+
+    .hour-hand {
+        width: 100px;
+        height: 5px;
+        background-color: rgba(255, 0, 0, 0);
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: rotate($default-degre);
+
+        .end,
+        .start {
+            height: 1px;
+            width: 60%;
+        }
+
+        .start {
+            background-color: transparent;
+        }
+
+        .end {
+            background-color: #000;
+            border: 2px solid #000;
+            border-radius: 20% 50% 50% 20%; //bout pointu 
+        }
+    }
+
+}
+
+.center-point {
+    width: 4px;
+    height: 4px;
+    background-color: #5e2900;
+    border-radius: 50%;
+    position: relative;
+    z-index: 4;
+    border: 1px solid #fff;
+
+    .second {
+        &::after {
+            position: absolute;
+            display: block;
+            width: 80px;
+            height: 1px;
+            content: ' ';
+            background-color: #fff;
+
+        }
+    }
+}
+
+.social-links {
+    min-width: 30px;
+    height: 100vh;
+    background-color: #c5804b;
+    margin-left: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    padding: .37em;
+
+    .social-button {
+        margin: auto;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+        border: 1px solid transparent;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.37);
+    }
+
+    .linkedin-button {
+        background-color: #0077b5;
+        border-color: #0077b5;
+    }
+
+    .twitter-button {
+        background-color: #1da1f2;
+        border-color: #1da1f2;
+    }
+
+    .github-button {
+        background-color: #333;
+        border-color: #333;
+    }
+
+    .facebook-button {
+        background-color: #0c69c0;
+        border-color: #0c69c0;
+
+    }
+
+    .social-button:hover {
+        background-color: transparent;
+    }
+
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: x-large;
+
+    .name {
+        font-weight: 700;
+        font-size: 16px;
+        color: #4b2000;
+    }
+}
+
+.source-code {
+    text-align: center;
+    margin-top: 20px;
+
+    a {
+        color: #5e2900;
+        text-decoration: none;
+    }
+}
