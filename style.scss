@@ -12,7 +12,7 @@ body {
     background-color: #c5804b;
     margin: 0;
     background-image:
-        linear-gradient(90deg, transparent 1px, #c5804b 1px),
+        linear-gradient(90deg, transparent 1px, #d9dbdb 1px),
         linear-gradient(0deg, transparent 1px, #f8dbc4 2px);
     background-size: 20px 20px;
 }
@@ -47,9 +47,9 @@ a {
     position: relative;
     width: 280px;
     height: 280px;
-    border: 6px solid #b87039;
+    border: 6px solid rgb(240, 236, 236);
     border-radius: 50%;
-    box-shadow: 0px 3px 5px #2c2c2cbb;
+    box-shadow: 0px 3px 5px #00000085;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,93 +60,12 @@ a {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #b87039;
+    // background-color: #c3c7c7;
     display: flex;
-    box-shadow: inset 0px 1px 4px #2c2c2c53;
-    background-image: radial-gradient(circle, #af7142, #975523);
+    box-shadow: inset 0px 1px 5px #2c2c2c52;
+    background-image: radial-gradient(circle, #d1caca76, #ffffff5e);
 }
 
-.twelve,
-.three,
-.six,
-.nine {
-    position: absolute;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: bolder;
-    font-family: cursive;
-}
-
-
-.twelve {
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    &::before {
-        width: 1px;
-        background-color: #eaf6f9;
-        height: 5px;
-        content: " ";
-        position: absolute;
-        left: 50%;
-        right: 50%;
-        margin-top: -6px;
-    }
-}
-
-.three {
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-
-    &::before {
-        right: 0;
-        width: 5px;
-        background-color: #eaf6f9;
-        height: 1px;
-        content: " ";
-        position: absolute;
-        top: 50%;
-        bottom: 50%;
-        margin-right: -6px;
-    }
-}
-
-.six {
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    &::after {
-        width: 1px;
-        background-color: #eaf6f9;
-        height: 5px;
-        content: " ";
-        position: absolute;
-        left: 50%;
-        right: 50%;
-        bottom: -0;
-        margin-bottom: -6px;
-    }
-}
-
-.nine {
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-
-    &::before {
-        width: 5px;
-        background-color: #eaf6f9;
-        height: 1px;
-        content: " ";
-        position: absolute;
-        top: 50%;
-        bottom: 50%;
-        margin-left: -6px;
-    }
-}
 
 .hand {
     position: relative;
@@ -187,7 +106,7 @@ a {
         }
 
         .end {
-            background-color: #ffffff;
+            background-color: red;
         }
     }
 
@@ -251,6 +170,88 @@ a {
 
 }
 
+.twelve,
+.three,
+.six,
+.nine {
+    position: absolute;
+    color: #464545;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+
+.twelve {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::before {
+        width: 1px;
+        background-color: #343333;
+        height: 5px;
+        content: " ";
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        margin-top: -6px;
+    }
+}
+
+.three {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+
+    &::before {
+        right: 0;
+        width: 5px;
+        background-color: #343333;
+        height: 1px;
+        content: " ";
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        margin-right: -6px;
+    }
+}
+
+.six {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &::after {
+        width: 1px;
+        background-color: #343333;
+        height: 5px;
+        content: " ";
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        bottom: -0;
+        margin-bottom: -6px;
+    }
+}
+
+.nine {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+
+    &::before {
+        width: 5px;
+        background-color: #343333;
+        height: 1px;
+        content: " ";
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        margin-left: -6px;
+    }
+}
+
 .center-point {
     width: 4px;
     height: 4px;
@@ -258,7 +259,7 @@ a {
     border-radius: 50%;
     position: relative;
     z-index: 4;
-    border: 1px solid #fff;
+    border: 1px solid #c10000;
 
     .second {
         &::after {
@@ -267,7 +268,7 @@ a {
             width: 80px;
             height: 1px;
             content: ' ';
-            background-color: #fff;
+            background-color: #e5e5e5;
 
         }
     }

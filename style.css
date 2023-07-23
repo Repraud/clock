@@ -7,7 +7,7 @@
 body {
   background-color: #c5804b;
   margin: 0;
-  background-image: linear-gradient(90deg, transparent 1px, #c5804b 1px), linear-gradient(0deg, transparent 1px, #f8dbc4 2px);
+  background-image: linear-gradient(90deg, transparent 1px, #d9dbdb 1px), linear-gradient(0deg, transparent 1px, #f8dbc4 2px);
   background-size: 20px 20px;
 }
 
@@ -39,9 +39,9 @@ a {
   position: relative;
   width: 280px;
   height: 280px;
-  border: 6px solid #b87039;
+  border: 6px solid rgb(240, 236, 236);
   border-radius: 50%;
-  box-shadow: 0px 3px 5px rgba(44, 44, 44, 0.7333333333);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5215686275);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,87 +52,9 @@ a {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #b87039;
   display: flex;
-  box-shadow: inset 0px 1px 4px rgba(44, 44, 44, 0.3254901961);
-  background-image: radial-gradient(circle, #af7142, #975523);
-}
-
-.twelve,
-.three,
-.six,
-.nine {
-  position: absolute;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: bolder;
-  font-family: cursive;
-}
-
-.twelve {
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.twelve::before {
-  width: 1px;
-  background-color: #eaf6f9;
-  height: 5px;
-  content: " ";
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  margin-top: -6px;
-}
-
-.three {
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-}
-.three::before {
-  right: 0;
-  width: 5px;
-  background-color: #eaf6f9;
-  height: 1px;
-  content: " ";
-  position: absolute;
-  top: 50%;
-  bottom: 50%;
-  margin-right: -6px;
-}
-
-.six {
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.six::after {
-  width: 1px;
-  background-color: #eaf6f9;
-  height: 5px;
-  content: " ";
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  margin-bottom: -6px;
-}
-
-.nine {
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-}
-.nine::before {
-  width: 5px;
-  background-color: #eaf6f9;
-  height: 1px;
-  content: " ";
-  position: absolute;
-  top: 50%;
-  bottom: 50%;
-  margin-left: -6px;
+  box-shadow: inset 0px 1px 5px rgba(44, 44, 44, 0.3215686275);
+  background-image: radial-gradient(circle, rgba(209, 202, 202, 0.462745098), rgba(255, 255, 255, 0.368627451));
 }
 
 .hand {
@@ -171,7 +93,7 @@ a {
   background-color: transparent;
 }
 .hand .second-hand .end {
-  background-color: #ffffff;
+  background-color: red;
 }
 .hand .minute-hand {
   width: 150px;
@@ -223,6 +145,83 @@ a {
   border-radius: 20% 50% 50% 20%;
 }
 
+.twelve,
+.three,
+.six,
+.nine {
+  position: absolute;
+  color: #464545;
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+.twelve {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.twelve::before {
+  width: 1px;
+  background-color: #343333;
+  height: 5px;
+  content: " ";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  margin-top: -6px;
+}
+
+.three {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.three::before {
+  right: 0;
+  width: 5px;
+  background-color: #343333;
+  height: 1px;
+  content: " ";
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  margin-right: -6px;
+}
+
+.six {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.six::after {
+  width: 1px;
+  background-color: #343333;
+  height: 5px;
+  content: " ";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  margin-bottom: -6px;
+}
+
+.nine {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.nine::before {
+  width: 5px;
+  background-color: #343333;
+  height: 1px;
+  content: " ";
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  margin-left: -6px;
+}
+
 .center-point {
   width: 4px;
   height: 4px;
@@ -230,7 +229,7 @@ a {
   border-radius: 50%;
   position: relative;
   z-index: 4;
-  border: 1px solid #fff;
+  border: 1px solid #c10000;
 }
 .center-point .second::after {
   position: absolute;
@@ -238,7 +237,7 @@ a {
   width: 80px;
   height: 1px;
   content: " ";
-  background-color: #fff;
+  background-color: #e5e5e5;
 }
 
 .social-links {
